@@ -31,16 +31,15 @@
   </target>
 
   <target name="test" depends="test-compile">
-    <junit printsummary="on" haltonfailure="yes" fork="true">
+    <junit printsummary="yes" haltonfailure="yes" fork="true">
       <classpath>
             <path refid="classpath.test"/>
       </classpath>
       <batchtest>
-            <fileset dir="${test}">
-                    <include name="**/*Test.java"/>
-            </fileset>
-       </batchtest>   
-      <formatter type="brief" usefile="false"/>
+            <fileset dir="${test}"/>                        
+       </batchtest>
+      <formatter type="xml"/>
+      <formatter type="plain" usefile="false"/>
     </junit>
      <echo>Compiling test [2/4]</echo>
   </target>

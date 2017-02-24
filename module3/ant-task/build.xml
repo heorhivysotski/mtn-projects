@@ -48,7 +48,7 @@
 
   <target name="dist" depends="test" >
     <mkdir dir="${dist}/lib"/>
-    <jar jarfile="${dist}/lib/testProject.jar" basedir="${build}"/>
+    <jar jarfile="${final}/lib/testProject.jar" basedir="${build}"/>
     <tar destfile="${final}/TestProject.tar" basedir="${dist}/lib/"/>
     <echo>Creating testProject.jar and testProject.tar [3/4]</echo>
   </target>

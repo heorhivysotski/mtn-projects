@@ -32,19 +32,15 @@
 
   <target name="test" depends="test-compile">
     <junit printsummary="on" haltonfailure="yes" fork="true">
-      <formatter type="plain" usefile="false"/>
-      <formatter type="xml"/>
-       <batchtest todir="${test}">
+      <classpath>
+            <path refid="claaspath.test"/>
+      </classpath>
+      <batchtest>
             <fileset dir="${test}">
                     <include name="**/*Test.java"/>
-                    <exclude name="**/Test*All.java"/>
             </fileset>
-       </batchtest>
-      <classpath>
-            <pathelement location="${test}"/>
-            <pathelement location="${test}"/>
-            <pathelement path="${lib}/junit-4.11.jar"/>
-      </classpath>  
+       </batchtest>   
+      <formatter type="brief" usefile="false"/>
     </junit>
      <echo>Compiling test [2/4]</echo>
   </target>

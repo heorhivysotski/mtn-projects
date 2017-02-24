@@ -31,7 +31,7 @@
   </target>
 
   <target name="test" depends="test-compile">
-    <junit printsummary="yes" haltonfailure="yes" fork="true">
+    <junit printsummary="on" haltonfailure="yes" fork="true">
       <formatter type="plain" usefile="false"/>
       <formatter type="xml"/>
        <batchtest todir="${test}">

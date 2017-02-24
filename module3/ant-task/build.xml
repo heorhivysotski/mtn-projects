@@ -31,17 +31,20 @@
   </target>
 
   <target name="test" depends="test-compile">
-    <junit printsummary="on" haltonfailure="yes" fork="true">
+    <junit printsummary="yes" haltonfailure="yes" fork="true">
+      <formatter type="plain" usefile="false"/>
+      <formatter type="xml"/>
+       <batchtest todir="${test}">
+            <fileset dir="${test}">
+                    <include name="**/*Test.java"/>
+                    <exclude name="**/Test*All.java"/>
+            </fileset>
+       </batchtest>
       <classpath>
-        <path refid="classpath.test"/>
-        <pathelement location="${test}"/>
-      </classpath>
-      <batchtest>
-       <fileset dir="${test}">
-            <include name="**/*Test*" />
-       </fileset>
-      </batchtest>
-    <formatter type="brief" usefile="false"/>
+            <pathelement location="${test}"/>
+            <pathelement location="${test}"/>
+            <pathelement path="${lib}/junit-4.11.jar"/>
+      </classpath>  
     </junit>
      <echo>Compiling test [2/4]</echo>
   </target>

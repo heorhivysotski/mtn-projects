@@ -33,7 +33,7 @@
   <target name="test" depends="test-compile">
     <junit printsummary="on" haltonfailure="yes" fork="true">
       <classpath>
-            <path refid="claaspath.test"/>
+            <path refid="classpath.test"/>
       </classpath>
       <batchtest>
             <fileset dir="${test}">

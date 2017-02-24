@@ -4,6 +4,7 @@
   <property name="build" location="build/main"/>
   <property name="testbuild" location="build/test"/>
   <property name="test" location="test"/>
+  <property name="final" location="final"/>
   <property name="dist"  location="dist"/>
   <property name="src" location="src"/>
 
@@ -15,6 +16,7 @@
 
   <target name="init">
     <mkdir dir="${build}"/>
+    <mkdir dir="${final}"/>
      <echo>Creating build directory [1/4]</echo>
   </target>
 
@@ -46,7 +48,7 @@
 
   <target name="dist" depends="test" >
     <mkdir dir="${dist}/lib"/>
-    <jar jarfile="${dist}/lib/testProject.jar" basedir="${build}"/>
+    <jar jarfile="${final}/lib/testProject.jar" basedir="${build}"/>
     <tar destfile="${src}/TestProject.tar" basedir="${dist}/lib/"/>
     <echo>Creating testProject.jar and testProject.tar [3/4]</echo>
   </target>

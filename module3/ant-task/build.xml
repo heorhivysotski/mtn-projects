@@ -50,7 +50,7 @@
     <mkdir dir="${dist}"/>
     <jar jarfile="${dist}/TestProject.jar" basedir="${build}"/>
     <tar destfile="${final}/TestProject.tar" basedir="${dist}/"/>
-    <gzip destfile="${final}/TestProject.tar.gz" basedir="${final}/TestProject.tar"/>
+    <gzip destfile="${final}/TestProject.tar.gz" src="${final}/TestProject.tar"/>
     <echo>Creating testProject.jar and testProject.tar [3/4]</echo>
   </target>
 

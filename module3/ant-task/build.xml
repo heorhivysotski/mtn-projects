@@ -39,7 +39,7 @@
             <fileset dir="${test}"/>                        
        </batchtest>
       <formatter type="xml"/>
-      <formatter type="plai" usefile="false"/>
+      <formatter type="plain" usefile="false"/>
     </junit>
      <echo>Compiling test [2/4]</echo>
   </target>

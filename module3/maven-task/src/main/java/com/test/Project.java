@@ -9,19 +9,19 @@ class Project {
     System.out.println("test");
   }
   //test1
-   public static void test() {
+   public static void test1() {
     System.out.println("test1");
   }
   //test2
-   public static void test() {
+   public static void test2() {
     System.out.println("test2");
   }
   //test3
-   public static void test() {
+   public static void test3() {
     System.out.println("test3");
   }
   //test4
-   public static void test() {
+   public static void test4() {
     System.out.println("test4");
   }  
   
